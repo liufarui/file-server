@@ -4,7 +4,7 @@
   "aside": {
     "type": "form",
     "wrapWithPanel": false,
-    "target": "window",
+    "target": "windows",
     "controls": [
       {
         "type": "tree",
