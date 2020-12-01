@@ -131,8 +131,8 @@
         "toggled": true
       },
       {
-        "name": "property_type",
-        "label": "property_type",
+        "name": "type",
+        "label": "type",
         "sortable": true,
         "type": "text",
         "toggled": true
@@ -211,8 +211,8 @@
                   },
                   {
                     "type": "text",
-                    "name": "property_type",
-                    "label": "property_type",
+                    "name": "type",
+                    "label": "type",
                     "required": true
                   },
                   {
