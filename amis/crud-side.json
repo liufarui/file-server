@@ -163,22 +163,6 @@
             }, {
               "type": "divider"
             }, {
-              "type": "static",
-              "name": "platform",
-              "label": "Platform(s)"
-            }, {
-              "type": "divider"
-            }, {
-              "type": "static",
-              "name": "version",
-              "label": "Engine version"
-            }, {
-              "type": "divider"
-            }, {
-              "type": "static",
-              "name": "grade",
-              "label": "CSS grade"
-            }, {
               "type": "divider"
             }, {
               "type": "html",
