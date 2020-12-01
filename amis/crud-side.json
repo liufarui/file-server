@@ -17,12 +17,12 @@
             "value": "app1",
             "children": [
               {
-                "label": "APP5",
-                "value": "app5"
+                "label": "Table1",
+                "value": "table1"
               },
               {
-                "label": "APP6",
-                "value": "app6"
+                "label": "Table2",
+                "value": "table2"
               }
             ]
           },
