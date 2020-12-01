@@ -7,7 +7,7 @@
     "target": "window",
     "controls": [{
       "type": "tree",
-      "name": "cat",
+      "name": "app",
       "inputClassName": "no-border",
       "submitOnChange": true,
       "options": [{
