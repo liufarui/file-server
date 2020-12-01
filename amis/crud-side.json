@@ -292,7 +292,7 @@
       "quickSaveItemApi": "https://houtai.baidu.com/api/sample/$id",
       "columns": [
         {
-          "name": "id",
+          "name": "ID",
           "label": "ID",
           "width": 20,
           "sortable": true,
