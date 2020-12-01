@@ -11,34 +11,7 @@
         "name": "app",
         "inputClassName": "no-border",
         "submitOnChange": true,
-        "options": [
-          {
-            "label": "APP1",
-            "value": "app1",
-            "children": [
-              {
-                "label": "Table1",
-                "value": "table1"
-              },
-              {
-                "label": "Table2",
-                "value": "table2"
-              }
-            ]
-          },
-          {
-            "label": "APP2",
-            "value": "app2"
-          },
-          {
-            "label": "APP3",
-            "value": "app3"
-          },
-          {
-            "label": "APP4",
-            "value": "app4"
-          }
-        ]
+        "api": "http://localhost:8080/amis/aside"
       }
     ]
   },
