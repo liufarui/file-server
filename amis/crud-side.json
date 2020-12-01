@@ -5,55 +5,79 @@
     "type": "form",
     "wrapWithPanel": false,
     "target": "window",
-    "controls": [{
-      "type": "tree",
-      "name": "app",
-      "inputClassName": "no-border",
-      "submitOnChange": true,
-      "options": [{
-        "label": "APP1",
-        "value": "app1"
-      }, {
-        "label": "APP2",
-        "value": "app2"
-      }, {
-        "label": "APP3",
-        "value": "app3"
-      }, {
-        "label": "APP4",
-        "value": "app4"
-      }]
-    }]
+    "controls": [
+      {
+        "type": "tree",
+        "name": "app",
+        "inputClassName": "no-border",
+        "submitOnChange": true,
+        "options": [
+          {
+            "label": "APP1",
+            "value": "app1",
+            "children": [
+              {
+                "label": "APP5",
+                "value": "app5"
+              },
+              {
+                "label": "APP6",
+                "value": "app6"
+              }
+            ]
+          },
+          {
+            "label": "APP2",
+            "value": "app2"
+          },
+          {
+            "label": "APP3",
+            "value": "app3"
+          },
+          {
+            "label": "APP4",
+            "value": "app4"
+          }
+        ]
+      }
+    ]
   },
-  "toolbar": [{
-    "type": "button",
-    "actionType": "dialog",
-    "label": "新增",
-    "primary": true,
-    "dialog": {
-      "title": "新增",
-      "body": {
-        "type": "form",
-        "name": "sample-edit-form",
-        "api": "post:http://localhost:8080/amis/insert",
-        "controls": [{
-          "type": "text",
-          "name": "name",
-          "label": "name",
-          "required": true
-        }, {
-          "type": "divider"
-        }, {
-          "type": "text",
-          "name": "property_type",
-          "label": "property_type",
-          "required": true
-        }, {
-          "type": "divider"
-        }]
+  "toolbar": [
+    {
+      "type": "button",
+      "actionType": "dialog",
+      "label": "新增",
+      "primary": true,
+      "dialog": {
+        "title": "新增",
+        "body": {
+          "type": "form",
+          "name": "sample-edit-form",
+          "api": "post:http://localhost:8080/amis/insert",
+          "controls": [
+            {
+              "type": "text",
+              "name": "name",
+              "label": "name",
+              "required": true
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "type": "text",
+              "name": "property_type",
+              "label": "property_type",
+              "required": true
+            },
+            {
+              "type": "divider"
+            }
+          ]
+        }
       }
     }
-  }],
+  ],
   "body": {
     "type": "crud",
     "draggable": true,
@@ -61,134 +85,164 @@
     "filter": {
       "title": "条件搜索",
       "submitText": "",
-      "controls": [{
-        "type": "text",
-        "name": "keywords",
-        "placeholder": "通过属性名搜索",
-        "addOn": {
-          "label": "搜索",
-          "type": "submit"
+      "controls": [
+        {
+          "type": "text",
+          "name": "keywords",
+          "placeholder": "通过属性名搜索",
+          "addOn": {
+            "label": "搜索",
+            "type": "submit"
+          }
+        },
+        {
+          "type": "plain",
+          "text": "这里的表单项可以配置多个"
         }
-      }, {
-        "type": "plain",
-        "text": "这里的表单项可以配置多个"
-      }]
+      ]
     },
-    "bulkActions": [{
-      "label": "批量删除",
-      "actionType": "ajax",
-      "api": "delete:https://houtai.baidu.com/api/sample/$ids",
-      "confirmText": "确定要批量删除?"
-    }, {
-      "label": "批量修改",
-      "actionType": "dialog",
-      "dialog": {
-        "title": "批量编辑",
-        "name": "sample-bulk-edit",
-        "body": {
-          "type": "form",
-          "api": "https://houtai.baidu.com/api/sample/bulkUpdate2",
-          "controls": [{
-            "type": "hidden",
-            "name": "ids"
-          }, {
-            "type": "text",
-            "name": "name",
-            "label": "name"
-          }]
+    "bulkActions": [
+      {
+        "label": "批量删除",
+        "actionType": "ajax",
+        "api": "delete:https://houtai.baidu.com/api/sample/$ids",
+        "confirmText": "确定要批量删除?"
+      },
+      {
+        "label": "批量修改",
+        "actionType": "dialog",
+        "dialog": {
+          "title": "批量编辑",
+          "name": "sample-bulk-edit",
+          "body": {
+            "type": "form",
+            "api": "https://houtai.baidu.com/api/sample/bulkUpdate2",
+            "controls": [
+              {
+                "type": "hidden",
+                "name": "ids"
+              },
+              {
+                "type": "text",
+                "name": "name",
+                "label": "name"
+              }
+            ]
+          }
         }
       }
-    }],
+    ],
     "quickSaveApi": "https://houtai.baidu.com/api/sample/bulkUpdate",
     "quickSaveItemApi": "https://houtai.baidu.com/api/sample/$id",
-    "columns": [{
-      "name": "id",
-      "label": "ID",
-      "width": 20,
-      "sortable": true,
-      "type": "text",
-      "toggled": true
-    }, {
-      "name": "name",
-      "label": "name",
-      "sortable": true,
-      "searchable": true,
-      "type": "text",
-      "toggled": true
-    }, {
-      "name": "property_type",
-      "label": "property_type",
-      "sortable": true,
-      "type": "text",
-      "toggled": true
-    }, {
-      "type": "operation",
-      "label": "操作",
-      "width": 130,
-      "buttons": [{
-        "type": "button",
-        "icon": "fa fa-eye",
-        "actionType": "dialog",
-        "dialog": {
-          "title": "查看",
-          "body": {
-            "type": "form",
-            "controls": [{
-              "type": "static",
-              "name": "name",
-              "label": "name"
-            }, {
-              "type": "divider"
-            }, {
-              "type": "static",
-              "name": "property_type",
-              "label": "property_type"
-            }, {
-              "type": "divider"
-            }, {
-              "type": "divider"
-            }, {
-              "type": "html",
-              "html": "<p>添加其他 <span>Html 片段</span> 需要支持变量替换（todo）.</p>"
-            }]
+    "columns": [
+      {
+        "name": "id",
+        "label": "ID",
+        "width": 20,
+        "sortable": true,
+        "type": "text",
+        "toggled": true
+      },
+      {
+        "name": "name",
+        "label": "name",
+        "sortable": true,
+        "searchable": true,
+        "type": "text",
+        "toggled": true
+      },
+      {
+        "name": "property_type",
+        "label": "property_type",
+        "sortable": true,
+        "type": "text",
+        "toggled": true
+      },
+      {
+        "type": "operation",
+        "label": "操作",
+        "width": 130,
+        "buttons": [
+          {
+            "type": "button",
+            "icon": "fa fa-eye",
+            "actionType": "dialog",
+            "dialog": {
+              "title": "查看",
+              "body": {
+                "type": "form",
+                "controls": [
+                  {
+                    "type": "static",
+                    "name": "name",
+                    "label": "name"
+                  },
+                  {
+                    "type": "divider"
+                  },
+                  {
+                    "type": "static",
+                    "name": "property_type",
+                    "label": "property_type"
+                  },
+                  {
+                    "type": "divider"
+                  },
+                  {
+                    "type": "divider"
+                  },
+                  {
+                    "type": "html",
+                    "html": "<p>添加其他 <span>Html 片段</span> 需要支持变量替换（todo）.</p>"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "button",
+            "icon": "fa fa-pencil",
+            "actionType": "dialog",
+            "dialog": {
+              "title": "编辑",
+              "body": {
+                "type": "form",
+                "name": "sample-edit-form",
+                "api": "https://houtai.baidu.com/api/sample/$id",
+                "controls": [
+                  {
+                    "type": "text",
+                    "name": "name",
+                    "label": "name",
+                    "required": true
+                  },
+                  {
+                    "type": "divider"
+                  },
+                  {
+                    "type": "text",
+                    "name": "property_type",
+                    "label": "property_type",
+                    "required": true
+                  },
+                  {
+                    "type": "divider"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "button",
+            "icon": "fa fa-times text-danger",
+            "actionType": "ajax",
+            "confirmText": "您确认要删除?",
+            "api": "delete:https://houtai.baidu.com/api/sample/$id"
           }
-        }
-      }, {
-        "type": "button",
-        "icon": "fa fa-pencil",
-        "actionType": "dialog",
-        "dialog": {
-          "title": "编辑",
-          "body": {
-            "type": "form",
-            "name": "sample-edit-form",
-            "api": "https://houtai.baidu.com/api/sample/$id",
-            "controls": [{
-              "type": "text",
-              "name": "name",
-              "label": "name",
-              "required": true
-            }, {
-              "type": "divider"
-            }, {
-              "type": "text",
-              "name": "property_type",
-              "label": "property_type",
-              "required": true
-            }, {
-              "type": "divider"
-            }]
-          }
-        }
-      }, {
-        "type": "button",
-        "icon": "fa fa-times text-danger",
-        "actionType": "ajax",
-        "confirmText": "您确认要删除?",
-        "api": "delete:https://houtai.baidu.com/api/sample/$id"
-      }],
-      "toggled": true
-    }]
+        ],
+        "toggled": true
+      }
+    ]
   },
   "type": "page"
 }
