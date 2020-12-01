@@ -62,7 +62,7 @@
     "draggable": true,
     "api": "http://localhost:8080/amis",
     "filter": {
-      "title": "条件搜索",
+      "title": "表属性搜索",
       "submitText": "",
       "controls": [
         {
@@ -237,15 +237,15 @@
     {
       "type": "crud",
       "draggable": true,
-      "api": "http://localhost:8080/amis",
+      "api": "http://localhost:8080/amis/table",
       "filter": {
-        "title": "条件333搜索",
+        "title": "表数据搜索",
         "submitText": "",
         "controls": [
           {
             "type": "text",
             "name": "keywords",
-            "placeholder": "通过属性名搜索",
+            "placeholder": "通过属性值搜索",
             "addOn": {
               "label": "搜索",
               "type": "submit"
@@ -308,17 +308,11 @@
           "toggled": true
         },
         {
-          "name": "type",
-          "label": "type",
+          "name": "sex",
+          "label": "sex",
           "sortable": true,
           "type": "text",
           "toggled": true
-        },
-        {
-          "type": "text",
-          "name": "indexed",
-          "label": "indexed",
-          "required": true
         },
         {
           "type": "operation",
@@ -349,8 +343,8 @@
                     },
                     {
                       "type": "text",
-                      "name": "indexed",
-                      "label": "indexed"
+                      "name": "sex",
+                      "label": "sex"
                     },
                     {
                       "type": "divider"
