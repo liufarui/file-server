@@ -11,17 +11,17 @@
       "inputClassName": "no-border",
       "submitOnChange": true,
       "options": [{
-        "label": "分类1",
-        "value": "cat1"
+        "label": "APP1",
+        "value": "app1"
       }, {
-        "label": "分类2",
-        "value": "cat2"
+        "label": "APP2",
+        "value": "app2"
       }, {
-        "label": "分类3",
-        "value": "cat3"
+        "label": "APP3",
+        "value": "app3"
       }, {
-        "label": "分类4",
-        "value": "cat4"
+        "label": "APP4",
+        "value": "app4"
       }]
     }]
   },
@@ -35,7 +35,7 @@
       "body": {
         "type": "form",
         "name": "sample-edit-form",
-        "api": "post:https://houtai.baidu.com/api/sample",
+        "api": "post:http://localhost:8080/amis/insert",
         "controls": [{
           "type": "text",
           "name": "engine",
@@ -74,7 +74,7 @@
   "body": {
     "type": "crud",
     "draggable": true,
-    "api": "https://houtai.baidu.com/api/sample",
+    "api": "http://localhost:8080/amis",
     "filter": {
       "title": "条件搜索",
       "submitText": "",
