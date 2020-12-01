@@ -44,7 +44,7 @@
               "required": true
             },
             {
-              "type": "boolean",
+              "type": "text",
               "name": "indexed",
               "label": "indexed",
               "required": true
@@ -138,7 +138,7 @@
         "toggled": true
       },
       {
-        "type": "boolean",
+        "type": "text",
         "name": "indexed",
         "label": "indexed",
         "required": true
@@ -171,7 +171,7 @@
                     "label": "type"
                   },
                   {
-                    "type": "boolean",
+                    "type": "text",
                     "name": "indexed",
                     "label": "indexed"
                   },
