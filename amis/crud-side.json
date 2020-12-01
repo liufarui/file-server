@@ -11,7 +11,7 @@
         "name": "app",
         "inputClassName": "no-border",
         "submitOnChange": true,
-        "api": "http://localhost:8080/amis/aside"
+        "source": "http://localhost:8080/amis/aside"
       }
     ]
   },
