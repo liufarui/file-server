@@ -38,35 +38,18 @@
         "api": "post:http://localhost:8080/amis/insert",
         "controls": [{
           "type": "text",
-          "name": "engine",
-          "label": "Engine",
+          "name": "name",
+          "label": "name",
           "required": true
         }, {
           "type": "divider"
         }, {
           "type": "text",
-          "name": "browser",
-          "label": "Browser",
+          "name": "property_type",
+          "label": "property_type",
           "required": true
         }, {
           "type": "divider"
-        }, {
-          "type": "text",
-          "name": "platform",
-          "label": "Platform(s)",
-          "required": true
-        }, {
-          "type": "divider"
-        }, {
-          "type": "text",
-          "name": "version",
-          "label": "Engine version"
-        }, {
-          "type": "divider"
-        }, {
-          "type": "text",
-          "name": "grade",
-          "label": "CSS grade"
         }]
       }
     }
@@ -81,7 +64,7 @@
       "controls": [{
         "type": "text",
         "name": "keywords",
-        "placeholder": "通过关键字搜索",
+        "placeholder": "通过属性名搜索",
         "addOn": {
           "label": "搜索",
           "type": "submit"
@@ -110,8 +93,8 @@
             "name": "ids"
           }, {
             "type": "text",
-            "name": "engine",
-            "label": "Engine"
+            "name": "name",
+            "label": "name"
           }]
         }
       }
@@ -126,15 +109,15 @@
       "type": "text",
       "toggled": true
     }, {
-      "name": "engine",
-      "label": "Rendering engine",
+      "name": "name",
+      "label": "name",
       "sortable": true,
       "searchable": true,
       "type": "text",
       "toggled": true
     }, {
-      "name": "browser",
-      "label": "Browser",
+      "name": "property_type",
+      "label": "property_type",
       "sortable": true,
       "type": "text",
       "toggled": true
@@ -152,14 +135,14 @@
             "type": "form",
             "controls": [{
               "type": "static",
-              "name": "engine",
-              "label": "Engine"
+              "name": "name",
+              "label": "name"
             }, {
               "type": "divider"
             }, {
               "type": "static",
-              "name": "browser",
-              "label": "Browser"
+              "name": "property_type",
+              "label": "property_type"
             }, {
               "type": "divider"
             }, {
@@ -182,35 +165,18 @@
             "api": "https://houtai.baidu.com/api/sample/$id",
             "controls": [{
               "type": "text",
-              "name": "engine",
-              "label": "Engine",
+              "name": "name",
+              "label": "name",
               "required": true
             }, {
               "type": "divider"
             }, {
               "type": "text",
-              "name": "browser",
-              "label": "Browser",
+              "name": "property_type",
+              "label": "property_type",
               "required": true
             }, {
               "type": "divider"
-            }, {
-              "type": "text",
-              "name": "platform",
-              "label": "Platform(s)",
-              "required": true
-            }, {
-              "type": "divider"
-            }, {
-              "type": "text",
-              "name": "version",
-              "label": "Engine version"
-            }, {
-              "type": "divider"
-            }, {
-              "type": "text",
-              "name": "grade",
-              "label": "CSS grade"
             }]
           }
         }
@@ -223,5 +189,6 @@
       }],
       "toggled": true
     }]
-  }
+  },
+  "type": "page"
 }
